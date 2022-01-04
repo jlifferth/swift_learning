@@ -11,6 +11,7 @@
 		A9FE6BE72783E48900F4E5FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6BE62783E48900F4E5FF /* ContentView.swift */; };
 		A9FE6BE92783E48B00F4E5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */; };
 		A9FE6BEC2783E48B00F4E5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FE6BEB2783E48B00F4E5FF /* Preview Assets.xcassets */; };
+		A9FE6BF52783E65600F4E5FF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FE6BF42783E65600F4E5FF /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		A9FE6BE62783E48900F4E5FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9FE6BEB2783E48B00F4E5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A9FE6BF22783E65600F4E5FF /* access_glucose.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = access_glucose.entitlements; sourceTree = "<group>"; };
+		A9FE6BF42783E65600F4E5FF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FE6BF52783E65600F4E5FF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +41,7 @@
 			children = (
 				A9FE6BE32783E48900F4E5FF /* access_glucose */,
 				A9FE6BE22783E48900F4E5FF /* Products */,
+				A9FE6BF32783E65600F4E5FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +56,7 @@
 		A9FE6BE32783E48900F4E5FF /* access_glucose */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE6BF22783E65600F4E5FF /* access_glucose.entitlements */,
 				A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */,
 				A9FE6BE62783E48900F4E5FF /* ContentView.swift */,
 				A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */,
@@ -65,6 +71,14 @@
 				A9FE6BEB2783E48B00F4E5FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A9FE6BF32783E65600F4E5FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE6BF42783E65600F4E5FF /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,12 +280,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = access_glucose/access_glucose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"access_glucose/Preview Content\"";
 				DEVELOPMENT_TEAM = 6ZV2C36P9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Glucose, heart rate, and steps are used to help monitor and predict metabolic health";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -295,12 +311,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = access_glucose/access_glucose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"access_glucose/Preview Content\"";
 				DEVELOPMENT_TEAM = 6ZV2C36P9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Glucose, heart rate, and steps are used to help monitor and predict metabolic health";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
