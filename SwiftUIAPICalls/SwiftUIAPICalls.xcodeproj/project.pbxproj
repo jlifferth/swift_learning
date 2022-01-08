@@ -7,116 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9FE6BE52783E48900F4E5FF /* access_glucoseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */; };
-		A9FE6BE72783E48900F4E5FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6BE62783E48900F4E5FF /* ContentView.swift */; };
-		A9FE6BE92783E48B00F4E5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */; };
-		A9FE6BEC2783E48B00F4E5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FE6BEB2783E48B00F4E5FF /* Preview Assets.xcassets */; };
-		A9FE6BF52783E65600F4E5FF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FE6BF42783E65600F4E5FF /* HealthKit.framework */; };
+		A9A6F3C42788B6F0003445CF /* SwiftUIAPICallsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A6F3C32788B6F0003445CF /* SwiftUIAPICallsApp.swift */; };
+		A9A6F3C62788B6F0003445CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A6F3C52788B6F0003445CF /* ContentView.swift */; };
+		A9A6F3C82788B6F2003445CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A6F3C72788B6F2003445CF /* Assets.xcassets */; };
+		A9A6F3CB2788B6F2003445CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A6F3CA2788B6F2003445CF /* Preview Assets.xcassets */; };
+		A9A6F3D22788D86A003445CF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A6F3D12788D86A003445CF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A9FE6BE12783E48900F4E5FF /* access_glucose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = access_glucose.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = access_glucoseApp.swift; sourceTree = "<group>"; };
-		A9FE6BE62783E48900F4E5FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9FE6BEB2783E48B00F4E5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A9FE6BF22783E65600F4E5FF /* access_glucose.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = access_glucose.entitlements; sourceTree = "<group>"; };
-		A9FE6BF42783E65600F4E5FF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		A9A6F3C02788B6F0003445CF /* SwiftUIAPICalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAPICalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A6F3C32788B6F0003445CF /* SwiftUIAPICallsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAPICallsApp.swift; sourceTree = "<group>"; };
+		A9A6F3C52788B6F0003445CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A9A6F3C72788B6F2003445CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9A6F3CA2788B6F2003445CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A9A6F3D12788D86A003445CF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A9FE6BDE2783E48900F4E5FF /* Frameworks */ = {
+		A9A6F3BD2788B6F0003445CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9FE6BF52783E65600F4E5FF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A9FE6BD82783E48900F4E5FF = {
+		A9A6F3B72788B6F0003445CF = {
 			isa = PBXGroup;
 			children = (
-				A9FE6BE32783E48900F4E5FF /* access_glucose */,
-				A9FE6BE22783E48900F4E5FF /* Products */,
-				A9FE6BF32783E65600F4E5FF /* Frameworks */,
+				A9A6F3C22788B6F0003445CF /* SwiftUIAPICalls */,
+				A9A6F3C12788B6F0003445CF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A9FE6BE22783E48900F4E5FF /* Products */ = {
+		A9A6F3C12788B6F0003445CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9FE6BE12783E48900F4E5FF /* access_glucose.app */,
+				A9A6F3C02788B6F0003445CF /* SwiftUIAPICalls.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A9FE6BE32783E48900F4E5FF /* access_glucose */ = {
+		A9A6F3C22788B6F0003445CF /* SwiftUIAPICalls */ = {
 			isa = PBXGroup;
 			children = (
-				A9FE6BF22783E65600F4E5FF /* access_glucose.entitlements */,
-				A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */,
-				A9FE6BE62783E48900F4E5FF /* ContentView.swift */,
-				A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */,
-				A9FE6BEA2783E48B00F4E5FF /* Preview Content */,
+				A9A6F3C32788B6F0003445CF /* SwiftUIAPICallsApp.swift */,
+				A9A6F3C52788B6F0003445CF /* ContentView.swift */,
+				A9A6F3C72788B6F2003445CF /* Assets.xcassets */,
+				A9A6F3C92788B6F2003445CF /* Preview Content */,
+				A9A6F3D12788D86A003445CF /* ViewModel.swift */,
 			);
-			path = access_glucose;
+			path = SwiftUIAPICalls;
 			sourceTree = "<group>";
 		};
-		A9FE6BEA2783E48B00F4E5FF /* Preview Content */ = {
+		A9A6F3C92788B6F2003445CF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				A9FE6BEB2783E48B00F4E5FF /* Preview Assets.xcassets */,
+				A9A6F3CA2788B6F2003445CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		A9FE6BF32783E65600F4E5FF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A9FE6BF42783E65600F4E5FF /* HealthKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9FE6BE02783E48900F4E5FF /* access_glucose */ = {
+		A9A6F3BF2788B6F0003445CF /* SwiftUIAPICalls */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9FE6BEF2783E48B00F4E5FF /* Build configuration list for PBXNativeTarget "access_glucose" */;
+			buildConfigurationList = A9A6F3CE2788B6F2003445CF /* Build configuration list for PBXNativeTarget "SwiftUIAPICalls" */;
 			buildPhases = (
-				A9FE6BDD2783E48900F4E5FF /* Sources */,
-				A9FE6BDE2783E48900F4E5FF /* Frameworks */,
-				A9FE6BDF2783E48900F4E5FF /* Resources */,
+				A9A6F3BC2788B6F0003445CF /* Sources */,
+				A9A6F3BD2788B6F0003445CF /* Frameworks */,
+				A9A6F3BE2788B6F0003445CF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = access_glucose;
-			productName = access_glucose;
-			productReference = A9FE6BE12783E48900F4E5FF /* access_glucose.app */;
+			name = SwiftUIAPICalls;
+			productName = SwiftUIAPICalls;
+			productReference = A9A6F3C02788B6F0003445CF /* SwiftUIAPICalls.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A9FE6BD92783E48900F4E5FF /* Project object */ = {
+		A9A6F3B82788B6F0003445CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					A9FE6BE02783E48900F4E5FF = {
+					A9A6F3BF2788B6F0003445CF = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = A9FE6BDC2783E48900F4E5FF /* Build configuration list for PBXProject "access_glucose" */;
+			buildConfigurationList = A9A6F3BB2788B6F0003445CF /* Build configuration list for PBXProject "SwiftUIAPICalls" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,42 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = A9FE6BD82783E48900F4E5FF;
-			productRefGroup = A9FE6BE22783E48900F4E5FF /* Products */;
+			mainGroup = A9A6F3B72788B6F0003445CF;
+			productRefGroup = A9A6F3C12788B6F0003445CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9FE6BE02783E48900F4E5FF /* access_glucose */,
+				A9A6F3BF2788B6F0003445CF /* SwiftUIAPICalls */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A9FE6BDF2783E48900F4E5FF /* Resources */ = {
+		A9A6F3BE2788B6F0003445CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9FE6BEC2783E48B00F4E5FF /* Preview Assets.xcassets in Resources */,
-				A9FE6BE92783E48B00F4E5FF /* Assets.xcassets in Resources */,
+				A9A6F3CB2788B6F2003445CF /* Preview Assets.xcassets in Resources */,
+				A9A6F3C82788B6F2003445CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A9FE6BDD2783E48900F4E5FF /* Sources */ = {
+		A9A6F3BC2788B6F0003445CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9FE6BE72783E48900F4E5FF /* ContentView.swift in Sources */,
-				A9FE6BE52783E48900F4E5FF /* access_glucoseApp.swift in Sources */,
+				A9A6F3C62788B6F0003445CF /* ContentView.swift in Sources */,
+				A9A6F3D22788D86A003445CF /* ViewModel.swift in Sources */,
+				A9A6F3C42788B6F0003445CF /* SwiftUIAPICallsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A9FE6BED2783E48B00F4E5FF /* Debug */ = {
+		A9A6F3CC2788B6F2003445CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +210,7 @@
 			};
 			name = Debug;
 		};
-		A9FE6BEE2783E48B00F4E5FF /* Release */ = {
+		A9A6F3CD2788B6F2003445CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -275,19 +265,17 @@
 			};
 			name = Release;
 		};
-		A9FE6BF02783E48B00F4E5FF /* Debug */ = {
+		A9A6F3CF2788B6F2003445CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = access_glucose/access_glucose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"access_glucose/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAPICalls/Preview Content\"";
 				DEVELOPMENT_TEAM = 6ZV2C36P9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Glucose, heart rate, and steps are used to help monitor and predict metabolic health";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,7 +286,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "longevity.access-glucose";
+				PRODUCT_BUNDLE_IDENTIFIER = longevity.SwiftUIAPICalls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -306,19 +294,17 @@
 			};
 			name = Debug;
 		};
-		A9FE6BF12783E48B00F4E5FF /* Release */ = {
+		A9A6F3D02788B6F2003445CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = access_glucose/access_glucose.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"access_glucose/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIAPICalls/Preview Content\"";
 				DEVELOPMENT_TEAM = 6ZV2C36P9F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "Glucose, heart rate, and steps are used to help monitor and predict metabolic health";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -329,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "longevity.access-glucose";
+				PRODUCT_BUNDLE_IDENTIFIER = longevity.SwiftUIAPICalls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -340,25 +326,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9FE6BDC2783E48900F4E5FF /* Build configuration list for PBXProject "access_glucose" */ = {
+		A9A6F3BB2788B6F0003445CF /* Build configuration list for PBXProject "SwiftUIAPICalls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9FE6BED2783E48B00F4E5FF /* Debug */,
-				A9FE6BEE2783E48B00F4E5FF /* Release */,
+				A9A6F3CC2788B6F2003445CF /* Debug */,
+				A9A6F3CD2788B6F2003445CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9FE6BEF2783E48B00F4E5FF /* Build configuration list for PBXNativeTarget "access_glucose" */ = {
+		A9A6F3CE2788B6F2003445CF /* Build configuration list for PBXNativeTarget "SwiftUIAPICalls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9FE6BF02783E48B00F4E5FF /* Debug */,
-				A9FE6BF12783E48B00F4E5FF /* Release */,
+				A9A6F3CF2788B6F2003445CF /* Debug */,
+				A9A6F3D02788B6F2003445CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A9FE6BD92783E48900F4E5FF /* Project object */;
+	rootObject = A9A6F3B82788B6F0003445CF /* Project object */;
 }
