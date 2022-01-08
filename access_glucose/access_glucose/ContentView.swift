@@ -23,9 +23,17 @@ func fetchHealthData() -> Void {
 
                 anchorComponents.day! -= offset
                 anchorComponents.hour = 2
+                
                 guard let anchorDate = Calendar.current.date(from: anchorComponents) else {
                     fatalError("*** unable to create a valid date from the given components ***")
                 }
+                
+                let interval = NSDateComponents()
+                interval.minute = 30
+                
+                let endDate = Date()
+                
+                
             } else {
                         print("Authorization failed")
                 }
