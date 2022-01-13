@@ -1,29 +1,29 @@
 //
 //  ContentView.swift
-//  access_glucose
+//  BlogPostProject1
 //
-//  Created by Jonathan Lifferth on 1/3/22.
-// Based on tutorial found at https://nyxo.app/statistical-queries-with-swift-and-healthkit
+//  Created by Miska Nurmi on 23.5.2020.
+//  Copyright © 2020 Nyxo. All rights reserved.
 //
-// Current status : basically nothing functions on a real device, but there are no errors so I don't know what the issue is
 
 import SwiftUI
 import HealthKit
 
 func fetchHealthData() -> Void {
     let healthStore = HKHealthStore()
-    
     if HKHealthStore.isHealthDataAvailable() {
-        let readData = Set([HKObjectType.quantityType(forIdentifier: .bloodGlucose)!])
+        let readData = Set([
+            HKObjectType.quantityType(forIdentifier: .heartRate)!
+        ])
         
         healthStore.requestAuthorization(toShare: [], read: readData) { (success, error) in
             if success {
                 let calendar = NSCalendar.current
-
+                
                 var anchorComponents = calendar.dateComponents([.day, .month, .year, .weekday], from: NSDate() as Date)
-
+                
                 let offset = (7 + anchorComponents.weekday! - 2) % 7
-
+                
                 anchorComponents.day! -= offset
                 anchorComponents.hour = 2
                 
@@ -33,34 +33,40 @@ func fetchHealthData() -> Void {
                 
                 let interval = NSDateComponents()
                 interval.minute = 30
-                
+                                    
                 let endDate = Date()
-                
+                                            
                 guard let startDate = calendar.date(byAdding: .month, value: -1, to: endDate) else {
                     fatalError("*** Unable to calculate the start date ***")
                 }
-                
-                guard let quantityType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodGlucose) else {
+                                    
+                guard let quantityType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate) else {
                     fatalError("*** Unable to create a step count type ***")
                 }
-                
-                let query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: nil, options: .discreteAverage, anchorDate: anchorDate, intervalComponents: interval as DateComponents)
+
+                let query = HKStatisticsCollectionQuery(quantityType: quantityType,
+                                                        quantitySamplePredicate: nil,
+                                                            options: .discreteAverage,
+                                                            anchorDate: anchorDate,
+                                                            intervalComponents: interval as DateComponents)
                 
                 query.initialResultsHandler = {
                     query, results, error in
                     
                     guard let statsCollection = results else {
-                                    fatalError("*** An error occurred while calculating the statistics: \(String(describing: error?.localizedDescription)) ***")
+                        fatalError("*** An error occurred while calculating the statistics: \(String(describing: error?.localizedDescription)) ***")
+                        
                     }
-                    
+                                        
                     statsCollection.enumerateStatistics(from: startDate, to: endDate) { statistics, stop in
                         if let quantity = statistics.averageQuantity() {
-                            let value = quantity.doubleValue(for: HKUnit(from: "mg/dL"))
                             let date = statistics.startDate
+                            //for: E.g. for steps it's HKUnit.count()
+                            let value = quantity.doubleValue(for: HKUnit(from: "count/min"))
                             print("done")
                             print(value)
                             print(date)
-                
+                                                        
                         }
                     }
                     
@@ -69,12 +75,10 @@ func fetchHealthData() -> Void {
                 healthStore.execute(query)
                 
             } else {
-                        print("Authorization failed")
-                }
-        }
+                print("Authorization failed")
 
-    } else {
-        print("No HealthKit data available")
+            }
+        }
     }
 }
 
@@ -82,16 +86,17 @@ struct ContentView: View {
     var body: some View {
         Button(action: fetchHealthData) {
                 Text("Fetch data")
-                .font(.largeTitle)
-                .bold()
-                .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.white)
+
         }
-        .frame(width: 300, height: 150)
-                .background(Color.black)
-                .cornerRadius(40)
-                .border(Color.black)
-                .cornerRadius(40)
-                .padding()
+        .frame(width: 350, height: 150)
+        .background(Color.black)
+        .cornerRadius(40)
+        .border(Color.black)
+        .cornerRadius(40)
+
     }
 }
 
