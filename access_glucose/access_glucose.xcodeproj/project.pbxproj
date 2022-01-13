@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A912E034278FC10F00FA35AA /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E033278FC10F00FA35AA /* HealthStore.swift */; };
+		A912E037278FC1B800FA35AA /* glucoseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E036278FC1B800FA35AA /* glucoseValue.swift */; };
+		A912E039278FD27A00FA35AA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912E038278FD27A00FA35AA /* Functions.swift */; };
+		A912E03C278FD2A900FA35AA /* Just in Frameworks */ = {isa = PBXBuildFile; productRef = A912E03B278FD2A900FA35AA /* Just */; };
 		A9FE6BE52783E48900F4E5FF /* access_glucoseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */; };
 		A9FE6BE72783E48900F4E5FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE6BE62783E48900F4E5FF /* ContentView.swift */; };
 		A9FE6BE92783E48B00F4E5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */; };
@@ -15,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A912E033278FC10F00FA35AA /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		A912E036278FC1B800FA35AA /* glucoseValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = glucoseValue.swift; sourceTree = "<group>"; };
+		A912E038278FD27A00FA35AA /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A9FE6BE12783E48900F4E5FF /* access_glucose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = access_glucose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = access_glucoseApp.swift; sourceTree = "<group>"; };
 		A9FE6BE62783E48900F4E5FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A912E03C278FD2A900FA35AA /* Just in Frameworks */,
 				A9FE6BF52783E65600F4E5FF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A912E035278FC18F00FA35AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A912E036278FC1B800FA35AA /* glucoseValue.swift */,
+				A912E038278FD27A00FA35AA /* Functions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A9FE6BD82783E48900F4E5FF = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +73,11 @@
 		A9FE6BE32783E48900F4E5FF /* access_glucose */ = {
 			isa = PBXGroup;
 			children = (
+				A912E035278FC18F00FA35AA /* Models */,
 				A9FE6BF22783E65600F4E5FF /* access_glucose.entitlements */,
 				A9FE6BE42783E48900F4E5FF /* access_glucoseApp.swift */,
 				A9FE6BE62783E48900F4E5FF /* ContentView.swift */,
+				A912E033278FC10F00FA35AA /* HealthStore.swift */,
 				A9FE6BE82783E48B00F4E5FF /* Assets.xcassets */,
 				A9FE6BEA2783E48B00F4E5FF /* Preview Content */,
 			);
@@ -97,6 +116,9 @@
 			dependencies = (
 			);
 			name = access_glucose;
+			packageProductDependencies = (
+				A912E03B278FD2A900FA35AA /* Just */,
+			);
 			productName = access_glucose;
 			productReference = A9FE6BE12783E48900F4E5FF /* access_glucose.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +147,9 @@
 				Base,
 			);
 			mainGroup = A9FE6BD82783E48900F4E5FF;
+			packageReferences = (
+				A912E03A278FD2A900FA35AA /* XCRemoteSwiftPackageReference "Just" */,
+			);
 			productRefGroup = A9FE6BE22783E48900F4E5FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,6 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FE6BE72783E48900F4E5FF /* ContentView.swift in Sources */,
+				A912E037278FC1B800FA35AA /* glucoseValue.swift in Sources */,
+				A912E034278FC10F00FA35AA /* HealthStore.swift in Sources */,
+				A912E039278FD27A00FA35AA /* Functions.swift in Sources */,
 				A9FE6BE52783E48900F4E5FF /* access_glucoseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A912E03A278FD2A900FA35AA /* XCRemoteSwiftPackageReference "Just" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dduan/Just";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A912E03B278FD2A900FA35AA /* Just */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A912E03A278FD2A900FA35AA /* XCRemoteSwiftPackageReference "Just" */;
+			productName = Just;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A9FE6BD92783E48900F4E5FF /* Project object */;
 }
