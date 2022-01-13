@@ -11,18 +11,19 @@ func arrayToString(floatArray: [Double]) -> String {
 }
 
 func callPrediction(glucoseString: String) -> String {
-    let rootAddress: String = "http://192.168.1.247:5000/"
+    let rootAddress: String = "http://10.3.75.103:5000/"
     let glucoseRequest: String = "predict?glucose_array="
     let glucoseString: String = glucoseString
     let url = URL(string: rootAddress + glucoseRequest + glucoseString)!
     
-    var response:String
+   var response:String
 
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
         if let data = data {
             let response = String(decoding: data, as: UTF8.self)
+            print("Prediction received: ")
             print(response)
-            print(type(of:response))
+//            print(type(of:response))
 
         } else if let error = error {
             print("HTTP Request Failed \(error)")
@@ -34,9 +35,11 @@ func callPrediction(glucoseString: String) -> String {
 }
 
 
+callPrediction(glucoseString: arrayToString(floatArray: glucoseData))
+
 
 let glucoseString2: String = arrayToString(floatArray: glucoseData)
-print(glucoseString2)
+//print(glucoseString2)
 
 
 
