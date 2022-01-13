@@ -33,7 +33,7 @@ class HealthStore {
         
         let anchorDate = Date.mondayAt12AM()
         
-        let daily = DateComponents(day: 1)
+        let daily = DateComponents(day: 1) // change to minute: 5 for glucose
         
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options: .strictStartDate)
         

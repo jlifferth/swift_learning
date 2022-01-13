@@ -3,6 +3,7 @@
 //  access_glucose
 //
 //  Created by Jonathan Lifferth on 1/3/22.
+// Based on tutorial found at https://nyxo.app/statistical-queries-with-swift-and-healthkit
 //
 
 import SwiftUI
@@ -12,7 +13,8 @@ func fetchHealthData() -> Void {
     let healthStore = HKHealthStore()
     
     if HKHealthStore.isHealthDataAvailable() {
-        let readData = Set([HKObjectType.quantityType(forIdentifier: .heartRate)!])
+        let readData = Set([HKObjectType.quantityType(forIdentifier: .bloodGlucose)!])
+        
         healthStore.requestAuthorization(toShare: [], read: readData) { (success, error) in
             if success {
                 let calendar = NSCalendar.current
@@ -33,6 +35,37 @@ func fetchHealthData() -> Void {
                 
                 let endDate = Date()
                 
+                guard let startDate = calendar.date(byAdding: .month, value: -1, to: endDate) else {
+                    fatalError("*** Unable to calculate the start date ***")
+                }
+                
+                guard let quantityType = HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bloodGlucose) else {
+                    fatalError("*** Unable to create a step count type ***")
+                }
+                
+                let query = HKStatisticsCollectionQuery(quantityType: quantityType, quantitySamplePredicate: nil, options: .discreteAverage, anchorDate: anchorDate, intervalComponents: interval as DateComponents)
+                
+                query.initialResultsHandler = {
+                    query, results, error in
+                    
+                    guard let statsCollection = results else {
+                                    fatalError("*** An error occurred while calculating the statistics: \(String(describing: error?.localizedDescription)) ***")
+                    }
+                    
+                    statsCollection.enumerateStatistics(from: startDate, to: endDate) { statistics, stop in
+                        if let quantity = statistics.averageQuantity() {
+                            let value = quantity.doubleValue(for: HKUnit(from: "mg/dL"))
+                            let date = statistics.startDate
+                            print("done")
+                            print(value)
+                            print(date)
+                
+                        }
+                    }
+                    
+                }
+                
+                healthStore.execute(query)
                 
             } else {
                         print("Authorization failed")
