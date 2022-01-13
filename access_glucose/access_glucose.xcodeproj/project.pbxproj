@@ -284,7 +284,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"access_glucose/Preview Content\"";
-				DEVELOPMENT_TEAM = 6ZV2C36P9F;
+				DEVELOPMENT_TEAM = 7T2269T9TK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Glucose, heart rate, and steps are used to help monitor and predict metabolic health";
@@ -315,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"access_glucose/Preview Content\"";
-				DEVELOPMENT_TEAM = 6ZV2C36P9F;
+				DEVELOPMENT_TEAM = 7T2269T9TK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Glucose, heart rate, and steps are used to help monitor and predict metabolic health";

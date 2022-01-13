@@ -5,6 +5,7 @@
 //  Created by Jonathan Lifferth on 1/3/22.
 // Based on tutorial found at https://nyxo.app/statistical-queries-with-swift-and-healthkit
 //
+// Current status : basically nothing functions on a real device, but there are no errors so I don't know what the issue is
 
 import SwiftUI
 import HealthKit
