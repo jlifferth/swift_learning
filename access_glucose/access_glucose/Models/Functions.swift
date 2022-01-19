@@ -15,7 +15,7 @@ func arrayToString(floatArray: [Int]) -> String {
 }
 
 func getPrediction(glucoseString: String) -> String {
-    let rootAddress: String = "http://10.3.75.103:5000/"
+    let rootAddress: String = "http://10.3.75.94:5000/"
     let glucoseRequest: String = "predict?glucose_array="
     let glucoseString: String = glucoseString
     let url = URL(string: rootAddress + glucoseRequest + glucoseString)!
